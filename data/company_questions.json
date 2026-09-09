@@ -1,0 +1,115 @@
+{
+  "sources": [
+    {
+      "id": "nowcoder-bytedance-ai-2026", "name": "字节跳动 AI Agent 开发公开面经（2026）", "repository_url": "https://www.nowcoder.com/", "content_url": "https://www.nowcoder.com/discuss/922659486983036928", "license_name": "Reference only; paraphrased", "license_url": "https://www.nowcoder.com/discuss/922659486983036928", "attribution": "牛客用户公开面经回忆；题目经最小化改写，非字节跳动官方题库", "retrieved_at": "2026-09-07", "source_type": "candidate_recall", "authority_level": "B", "region": "CN"
+    },
+    {
+      "id": "nowcoder-alibaba-ai-2026", "name": "阿里 AI 应用开发公开面经（2026）", "repository_url": "https://www.nowcoder.com/", "content_url": "https://www.nowcoder.com/discuss/923740158455730176", "license_name": "Reference only; paraphrased", "license_url": "https://www.nowcoder.com/discuss/923740158455730176", "attribution": "牛客用户公开面经回忆；题目经最小化改写，非阿里巴巴官方题库", "retrieved_at": "2026-09-07", "source_type": "candidate_recall", "authority_level": "B", "region": "CN"
+    },
+    {
+      "id": "nowcoder-multi-agent-2026", "name": "网易、阿里、腾讯 AI Agent 后端公开面经（2026）", "repository_url": "https://www.nowcoder.com/", "content_url": "https://www.nowcoder.com/discuss/919608103723622400", "license_name": "Reference only; paraphrased", "license_url": "https://www.nowcoder.com/discuss/919608103723622400", "attribution": "牛客用户三场面试回忆；题目经最小化改写，非相关公司官方题库", "retrieved_at": "2026-09-07", "source_type": "candidate_recall", "authority_level": "B", "region": "CN"
+    },
+    {
+      "id": "nowcoder-meituan-data-2025", "name": "美团数据运营公开面经（2025）", "repository_url": "https://www.nowcoder.com/", "content_url": "https://www.nowcoder.com/discuss/798588066779680768", "license_name": "Reference only; paraphrased", "license_url": "https://www.nowcoder.com/discuss/798588066779680768", "attribution": "牛客用户公开面经回忆；题目经最小化改写，非美团官方题库", "retrieved_at": "2026-09-07", "source_type": "candidate_recall", "authority_level": "B", "region": "CN"
+    },
+    {
+      "id": "nowcoder-bytedance-data-historical", "name": "字节跳动数据分析公开面经（历史样本）", "repository_url": "https://www.nowcoder.com/", "content_url": "https://www.nowcoder.com/discuss/353156286617427968", "license_name": "Reference only; paraphrased", "license_url": "https://www.nowcoder.com/discuss/353156286617427968", "attribution": "牛客用户公开面经回忆；历史样本仅用于题型参考，非字节跳动官方题库", "retrieved_at": "2026-09-07", "source_type": "candidate_recall", "authority_level": "C", "region": "CN"
+    },
+    {
+      "id": "nowcoder-alibaba-data-historical", "name": "阿里数据分析公开面经（历史样本）", "repository_url": "https://www.nowcoder.com/", "content_url": "https://www.nowcoder.com/discuss/353156460706209792", "license_name": "Reference only; paraphrased", "license_url": "https://www.nowcoder.com/discuss/353156460706209792", "attribution": "牛客用户公开面经回忆；历史样本仅用于题型参考，非阿里巴巴官方题库", "retrieved_at": "2026-09-07", "source_type": "candidate_recall", "authority_level": "C", "region": "CN"
+    }
+  ],
+  "questions": [
+    {
+      "id": "real-byte-ai-rag-001", "source_id": "nowcoder-bytedance-ai-2026", "topic_key": "rag", "roles": ["ai"], "companies": ["字节跳动"], "stages": ["技术一面"], "employment_types": ["实习", "校招"], "question_type": "公开面经回忆", "frequency_band": "reported", "confidence": 0.82, "authority_grade": "B", "reported_at": "2026-05-07", "source_claim": "candidate_recall", "verified_at": "2026-09-07", "difficulty": 3, "language": "zh-CN", "tags": ["RAG", "完整链路"],
+      "question": "详细讲一下你项目中的 RAG 流程，从文档切分到最终生成分别做了什么？", "alternate_question": "如果把你当前 RAG 链路画出来，每一步的输入、输出和失败点是什么？", "follow_up_questions": ["多路检索和重排序分别解决什么问题？", "你如何证明 RAG 确实优于不使用 RAG？"],
+      "answer_outline": ["解析切分与索引", "查询、召回、重排与上下文组装", "生成、引用和分层评估"], "scoring_points": ["结合本人项目", "链路完整", "有指标和失败案例"], "common_mistakes": ["只罗列框架", "没有评估"], "verification_urls": ["https://www.nowcoder.com/discuss/922659486983036928", "https://arxiv.org/abs/2005.11401"]
+    },
+    {
+      "id": "real-byte-ai-agent-001", "source_id": "nowcoder-bytedance-ai-2026", "topic_key": "agent", "roles": ["ai"], "companies": ["字节跳动"], "stages": ["技术一面"], "employment_types": ["实习", "校招"], "question_type": "公开面经回忆", "frequency_band": "reported", "confidence": 0.81, "authority_grade": "B", "reported_at": "2026-05-07", "source_claim": "candidate_recall", "verified_at": "2026-09-07", "difficulty": 4, "language": "zh-CN", "tags": ["ReAct", "Plan-and-Execute"],
+      "question": "对比 ReAct 与 Plan-and-Execute 两种 Agent 模式，它们的优缺点和适用场景是什么？", "alternate_question": "你的 Agent 为什么选择当前规划模式，而不是固定工作流？", "follow_up_questions": ["长任务中计划失效怎么处理？", "怎样限制无效循环和延迟放大？"],
+      "answer_outline": ["交替推理执行与先规划后执行的区别", "动态性、可控性和成本取舍", "状态、重规划和终止条件"], "scoring_points": ["不只背定义", "能结合业务选型", "说明失败恢复"], "common_mistakes": ["把两者说成框架名称", "忽略执行预算"], "verification_urls": ["https://www.nowcoder.com/discuss/922659486983036928", "https://arxiv.org/abs/2210.03629"]
+    },
+    {
+      "id": "real-byte-ai-project-001", "source_id": "nowcoder-bytedance-ai-2026", "topic_key": "project", "roles": ["ai"], "companies": ["字节跳动"], "stages": ["技术一面", "技术二面"], "employment_types": ["实习", "校招"], "question_type": "公开面经回忆", "frequency_band": "reported", "confidence": 0.83, "authority_grade": "B", "reported_at": "2026-07-14", "source_claim": "candidate_recall", "verified_at": "2026-09-07", "difficulty": 3, "language": "zh-CN", "tags": ["项目深挖", "Agent架构"],
+      "question": "你实习中落地的 Agent 应用，整体架构链路是怎样的？", "alternate_question": "只挑 Agent 项目里最关键的一次工程取舍来讲，为什么这么做？", "follow_up_questions": ["后端是否支持多租户并发调用？", "线上怎样判断模型结果有效、准确且可用？"],
+      "answer_outline": ["业务目标与输入输出", "规划、工具、知识、状态和执行链路", "个人贡献与量化结果"], "scoring_points": ["突出本人实现", "架构有边界", "能回答线上指标"], "common_mistakes": ["套用通用架构图", "没有真实数据"], "verification_urls": ["https://www.nowcoder.com/discuss/922659809084571648", "https://opentelemetry.io/docs/concepts/signals/traces/"]
+    },
+
+    {
+      "id": "real-ali-ai-rag-001", "source_id": "nowcoder-alibaba-ai-2026", "topic_key": "rag", "roles": ["ai"], "companies": ["阿里巴巴"], "stages": ["技术一面"], "employment_types": ["实习", "校招", "社招"], "question_type": "公开面经回忆", "frequency_band": "reported", "confidence": 0.84, "authority_grade": "B", "reported_at": "2026-04-26", "source_claim": "candidate_recall", "verified_at": "2026-09-07", "difficulty": 4, "language": "zh-CN", "tags": ["召回错误", "幻觉"],
+      "question": "如何发现模型幻觉是由 RAG 召回不准确造成的？你会如何修复？", "alternate_question": "回答错了，怎样证明根因在检索而不是生成模型？", "follow_up_questions": ["K 值如何选择？", "如何分别评估召回与最终答案？"],
+      "answer_outline": ["保留召回证据并做错误归因", "计算召回和排序指标", "优化切分、查询、混合检索或重排"], "scoring_points": ["分层定位", "指标明确", "修复可验证"], "common_mistakes": ["一律归因于模型", "只调 Prompt"], "verification_urls": ["https://www.nowcoder.com/discuss/923740158455730176", "https://arxiv.org/abs/2005.11401"]
+    },
+    {
+      "id": "real-ali-ai-agent-001", "source_id": "nowcoder-alibaba-ai-2026", "topic_key": "agent", "roles": ["ai"], "companies": ["阿里巴巴"], "stages": ["技术一面"], "employment_types": ["实习", "校招", "社招"], "question_type": "公开面经回忆", "frequency_band": "reported", "confidence": 0.82, "authority_grade": "B", "reported_at": "2026-04-25", "source_claim": "candidate_recall", "verified_at": "2026-09-07", "difficulty": 4, "language": "zh-CN", "tags": ["MCP", "Function Call", "Workflow"],
+      "question": "MCP 和 Function Call 有什么区别？生产环境为什么不能只依赖模型自由调用工具？", "alternate_question": "一个任务什么时候应该做成 Workflow，什么时候适合自主 Agent？", "follow_up_questions": ["协议层为什么要与业务工具解耦？", "怎样处理工具调用错误和死循环？"],
+      "answer_outline": ["区分工具选择、协议互操作和执行控制", "按确定性与风险选择工作流", "参数校验、权限、重试和终止"], "scoring_points": ["概念边界清楚", "结合生产风险", "有执行层控制"], "common_mistakes": ["把 MCP 等同于函数调用", "只谈模型能力"], "verification_urls": ["https://www.nowcoder.com/discuss/923740158455730176", "https://modelcontextprotocol.io/specification/"]
+    },
+    {
+      "id": "real-ali-ai-backend-001", "source_id": "nowcoder-alibaba-ai-2026", "topic_key": "backend", "roles": ["ai", "general"], "companies": ["阿里巴巴"], "stages": ["技术一面"], "employment_types": ["实习", "校招", "社招"], "question_type": "公开面经回忆", "frequency_band": "reported", "confidence": 0.8, "authority_grade": "B", "reported_at": "2026-04-26", "source_claim": "candidate_recall", "verified_at": "2026-09-07", "difficulty": 4, "language": "zh-CN", "tags": ["Kafka", "消息堆积"],
+      "question": "Kafka 高峰期出现消息堆积时如何判断原因并处理？", "alternate_question": "怎样区分上游流量突增、消费者变慢和分区不均导致的积压？", "follow_up_questions": ["扩消费者为什么不一定有效？", "业务要求顺序消费时如何扩容？"],
+      "answer_outline": ["观察生产速率、消费速率、Lag 和分区分布", "定位下游耗时与失败重试", "分区、消费者、批量和背压优化"], "scoring_points": ["先测量再扩容", "理解消费者组与分区关系", "考虑顺序性"], "common_mistakes": ["直接无限增加消费者", "忽略毒消息"], "verification_urls": ["https://www.nowcoder.com/discuss/923740158455730176", "https://kafka.apache.org/documentation/"]
+    },
+
+    {
+      "id": "real-tencent-ai-agent-001", "source_id": "nowcoder-multi-agent-2026", "topic_key": "agent", "roles": ["ai"], "companies": ["腾讯"], "stages": ["技术一面"], "employment_types": ["实习", "校招"], "question_type": "公开面经回忆", "frequency_band": "reported", "confidence": 0.8, "authority_grade": "B", "reported_at": "2026-08", "source_claim": "candidate_recall", "verified_at": "2026-09-07", "difficulty": 4, "language": "zh-CN", "tags": ["多租户", "会话状态"],
+      "question": "并发场景下 Agent 会话状态如何设计，才能避免不同用户上下文串扰？", "alternate_question": "多实例部署后，Agent 的短期状态和长期记忆分别存在哪里？", "follow_up_questions": ["如何处理会话并发写？", "过期、恢复和隐私删除怎么做？"],
+      "answer_outline": ["稳定会话与租户标识", "状态外置、版本控制或串行化", "权限隔离、过期和审计"], "scoring_points": ["明确隔离键", "考虑并发竞态", "生命周期完整"], "common_mistakes": ["把状态放进进程全局变量", "仅靠提示词区分用户"], "verification_urls": ["https://www.nowcoder.com/discuss/919608103723622400", "https://owasp.org/www-project-top-10-for-large-language-model-applications/"]
+    },
+    {
+      "id": "real-tencent-ai-backend-001", "source_id": "nowcoder-multi-agent-2026", "topic_key": "backend", "roles": ["ai", "general"], "companies": ["腾讯"], "stages": ["技术一面"], "employment_types": ["实习", "校招"], "question_type": "公开面经回忆", "frequency_band": "reported", "confidence": 0.8, "authority_grade": "B", "reported_at": "2026-08", "source_claim": "candidate_recall", "verified_at": "2026-09-07", "difficulty": 3, "language": "zh-CN", "tags": ["MVCC", "锁"],
+      "question": "讲一下 MVCC 的核心机制，以及它和行锁、事务隔离之间的关系。", "alternate_question": "快照读与当前读分别会看到什么数据，何时需要加锁？", "follow_up_questions": ["Read View 通常包含哪些信息？", "为什么长事务会带来问题？"],
+      "answer_outline": ["版本链与可见性判断", "快照读和当前读", "不同隔离级别与锁的配合"], "scoring_points": ["不把 MVCC 说成完全无锁", "可见性逻辑正确", "说明长事务影响"], "common_mistakes": ["混淆 MVCC 与乐观锁", "忽略隔离级别"], "verification_urls": ["https://www.nowcoder.com/discuss/919608103723622400", "https://dev.mysql.com/doc/refman/8.4/en/innodb-multi-versioning.html"]
+    },
+
+    {
+      "id": "real-netease-ai-rag-001", "source_id": "nowcoder-multi-agent-2026", "topic_key": "rag", "roles": ["ai"], "companies": ["网易"], "stages": ["技术一面"], "employment_types": ["实习", "校招"], "question_type": "公开面经回忆", "frequency_band": "reported", "confidence": 0.81, "authority_grade": "B", "reported_at": "2026-08", "source_claim": "candidate_recall", "verified_at": "2026-09-07", "difficulty": 4, "language": "zh-CN", "tags": ["向量库分片", "海量文档"],
+      "question": "海量文档场景下，向量库如何分片并优化召回延迟？", "alternate_question": "数据量扩大百倍后，当前向量检索系统最可能遇到哪些瓶颈？", "follow_up_questions": ["分片路由依据是什么？", "近似检索的召回率与延迟如何权衡？"],
+      "answer_outline": ["按租户、业务或哈希分片", "索引参数、过滤和查询路由", "容量、延迟和召回率压测"], "scoring_points": ["先明确数据与查询分布", "理解 ANN 权衡", "有压测指标"], "common_mistakes": ["只说增加机器", "忽略跨分片合并"], "verification_urls": ["https://www.nowcoder.com/discuss/919608103723622400", "https://github.com/facebookresearch/faiss/wiki"]
+    },
+    {
+      "id": "real-netease-ai-agent-001", "source_id": "nowcoder-multi-agent-2026", "topic_key": "agent", "roles": ["ai"], "companies": ["网易"], "stages": ["技术一面"], "employment_types": ["实习", "校招"], "question_type": "公开面经回忆", "frequency_band": "reported", "confidence": 0.81, "authority_grade": "B", "reported_at": "2026-08", "source_claim": "candidate_recall", "verified_at": "2026-09-07", "difficulty": 3, "language": "zh-CN", "tags": ["工具输出校验", "容错"],
+      "question": "Agent 多工具调用时，怎样校验工具输出并防止无效结果继续污染后续步骤？", "alternate_question": "工具返回 HTTP 200，但内容缺字段或语义错误，Agent 应如何处理？", "follow_up_questions": ["Schema 合法是否代表业务合法？", "失败后重试、换工具还是转人工如何决策？"],
+      "answer_outline": ["语法、Schema 与业务规则分层校验", "错误分类和有限恢复", "状态隔离与人工兜底"], "scoring_points": ["校验发生在执行层", "恢复策略按错误类型", "阻断错误传播"], "common_mistakes": ["相信模型自行发现错误", "无限重试"], "verification_urls": ["https://www.nowcoder.com/discuss/919608103723622400", "https://json-schema.org/"]
+    },
+
+    {
+      "id": "real-meituan-data-business-001", "source_id": "nowcoder-meituan-data-2025", "topic_key": "business", "roles": ["data"], "companies": ["美团"], "stages": ["技术一面", "业务面"], "employment_types": ["实习", "校招"], "question_type": "公开面经回忆", "frequency_band": "reported", "confidence": 0.84, "authority_grade": "B", "reported_at": "2025-09-19", "source_claim": "candidate_recall", "verified_at": "2026-09-07", "difficulty": 3, "language": "zh-CN", "tags": ["订单异动", "本地生活"],
+      "question": "某个城市的外卖订单量突然下降，你会如何排查并定位原因？", "alternate_question": "某类商家近期订单量波动，你会从哪些步骤开始分析，需要哪些数据？", "follow_up_questions": ["如何区分供给、需求、履约和活动因素？", "先看哪个维度，为什么？"],
+      "answer_outline": ["确认口径与数据链路", "拆解流量、转化、供给、价格和履约", "按城市、商圈、品类和用户分群验证"], "scoring_points": ["符合本地生活业务链路", "拆解有优先级", "结论可验证"], "common_mistakes": ["只看用户端", "罗列原因不做验证"], "verification_urls": ["https://www.nowcoder.com/discuss/798588066779680768", "https://www.itl.nist.gov/div898/handbook/"]
+    },
+    {
+      "id": "real-meituan-data-visual-001", "source_id": "nowcoder-meituan-data-2025", "topic_key": "visualization", "roles": ["data"], "companies": ["美团"], "stages": ["技术一面", "业务面"], "employment_types": ["实习", "校招"], "question_type": "公开面经回忆", "frequency_band": "reported", "confidence": 0.83, "authority_grade": "B", "reported_at": "2025-09-19", "source_claim": "candidate_recall", "verified_at": "2026-09-07", "difficulty": 3, "language": "zh-CN", "tags": ["数据看板", "运营决策"],
+      "question": "你认为一个能支持运营决策的好数据看板应该具备哪些特点？", "alternate_question": "为商家运营设计看板时，首屏放什么，异常如何下钻？", "follow_up_questions": ["管理层和运营人员的视图如何不同？", "怎样防止指标很多但没人行动？"],
+      "answer_outline": ["围绕决策任务选择指标", "结果、驱动与对比基准分层", "支持异常定位和行动闭环"], "scoring_points": ["受众明确", "指标有口径", "能下钻到行动"], "common_mistakes": ["把所有指标铺满", "只重视视觉效果"], "verification_urls": ["https://www.nowcoder.com/discuss/798588066779680768", "https://learn.microsoft.com/en-us/power-bi/create-reports/service-dashboards"]
+    },
+    {
+      "id": "real-meituan-data-quality-001", "source_id": "nowcoder-meituan-data-2025", "topic_key": "quality", "roles": ["data"], "companies": ["美团"], "stages": ["技术一面", "业务面"], "employment_types": ["实习", "校招"], "question_type": "公开面经回忆", "frequency_band": "reported", "confidence": 0.82, "authority_grade": "B", "reported_at": "2025-09-19", "source_claim": "candidate_recall", "verified_at": "2026-09-07", "difficulty": 2, "language": "zh-CN", "tags": ["脏数据", "缺失值"],
+      "question": "实际工作遇到脏数据或缺失数据时，你如何保证分析结论准确？", "alternate_question": "商家宽表存在重复、缺失和口径不一致，你会按什么顺序处理？", "follow_up_questions": ["哪些异常不能直接删除？", "处理后如何验证没有引入偏差？"],
+      "answer_outline": ["数据画像和影响评估", "结合业务机制选择处理方式", "对账、敏感性分析和质量监控"], "scoring_points": ["不机械清洗", "保留处理记录", "验证影响"], "common_mistakes": ["缺失值一律填零", "先清洗后问口径"], "verification_urls": ["https://www.nowcoder.com/discuss/798588066779680768", "https://scikit-learn.org/stable/modules/impute.html"]
+    },
+
+    {
+      "id": "real-byte-data-sql-001", "source_id": "nowcoder-bytedance-data-historical", "topic_key": "sql", "roles": ["data"], "companies": ["字节跳动"], "stages": ["技术面"], "employment_types": ["实习", "校招"], "question_type": "历史公开面经回忆", "frequency_band": "historical", "confidence": 0.68, "authority_grade": "C", "reported_at": "2020-04", "source_claim": "candidate_recall_historical", "verified_at": "2026-09-07", "difficulty": 3, "language": "zh-CN", "tags": ["窗口函数", "Rank"],
+      "question": "窗口函数中 RANK 和 DENSE_RANK 有什么区别？请结合业务排名举例。", "alternate_question": "每个视频标签下找观看人数最多的三个视频，你会怎样写 SQL？", "follow_up_questions": ["并列第三名是否保留？", "一个视频有多个标签时如何避免重复计数？"],
+      "answer_outline": ["解释排名跳号差异", "分组窗口排名", "按业务口径处理并列和去重"], "scoring_points": ["函数语义正确", "SQL 分层清晰", "先明确口径"], "common_mistakes": ["混淆 ROW_NUMBER", "忽略多标签重复"], "verification_urls": ["https://www.nowcoder.com/discuss/353156286617427968", "https://www.postgresql.org/docs/current/tutorial-window.html"]
+    },
+    {
+      "id": "real-byte-data-business-001", "source_id": "nowcoder-bytedance-data-historical", "topic_key": "business", "roles": ["data"], "companies": ["字节跳动"], "stages": ["业务面"], "employment_types": ["实习", "校招"], "question_type": "历史公开面经回忆", "frequency_band": "historical", "confidence": 0.66, "authority_grade": "C", "reported_at": "2020-04", "source_claim": "candidate_recall_historical", "verified_at": "2026-09-07", "difficulty": 4, "language": "zh-CN", "tags": ["广告策略", "指标体系"],
+      "question": "给一批新用户投放广告时，广告类型、数量和间隔如何确定？你会观察哪些指标？", "alternate_question": "选择一个常用 App，为它建立指标体系并提出一个可验证的优化方向。", "follow_up_questions": ["短期点击和长期体验冲突怎么办？", "如何识别频控策略的增量效果？"],
+      "answer_outline": ["按用户目标和生命周期分层", "定义收益、体验和留存护栏", "通过实验选择频次和内容"], "scoring_points": ["兼顾长期价值", "指标可计算", "有实验设计"], "common_mistakes": ["只优化点击率", "不考虑对照组"], "verification_urls": ["https://www.nowcoder.com/discuss/353156286617427968", "https://www.itl.nist.gov/div898/handbook/prc/section3/prc3.htm"]
+    },
+
+    {
+      "id": "real-ali-data-project-001", "source_id": "nowcoder-alibaba-data-historical", "topic_key": "project", "roles": ["data"], "companies": ["阿里巴巴"], "stages": ["技术一面", "业务面"], "employment_types": ["实习", "校招"], "question_type": "历史公开面经回忆", "frequency_band": "historical", "confidence": 0.65, "authority_grade": "C", "reported_at": "2021-05", "source_claim": "candidate_recall_historical", "verified_at": "2026-09-07", "difficulty": 3, "language": "zh-CN", "tags": ["实习项目", "业务价值"],
+      "question": "介绍你做过最复杂的数据分析项目：难点是什么、你的贡献在哪里、对业务产生了什么影响？", "alternate_question": "如果继续优化这个项目，你会优先补哪一块，为什么？", "follow_up_questions": ["业务方最终采取了什么行动？", "如何排除结果只是自然波动？"],
+      "answer_outline": ["业务目标和决策背景", "个人分析过程与困难", "落地行动和量化影响"], "scoring_points": ["个人边界清楚", "分析连接业务行动", "结果有验证"], "common_mistakes": ["只讲模型和工具", "用相关性证明效果"], "verification_urls": ["https://www.nowcoder.com/discuss/353156460706209792", "https://www.itl.nist.gov/div898/handbook/"]
+    },
+    {
+      "id": "real-ali-data-business-001", "source_id": "nowcoder-alibaba-data-historical", "topic_key": "business", "roles": ["data"], "companies": ["阿里巴巴"], "stages": ["业务面"], "employment_types": ["实习", "校招"], "question_type": "历史公开面经回忆", "frequency_band": "historical", "confidence": 0.64, "authority_grade": "C", "reported_at": "2021-05", "source_claim": "candidate_recall_historical", "verified_at": "2026-09-07", "difficulty": 3, "language": "zh-CN", "tags": ["岗位理解", "商业分析"],
+      "question": "你如何理解数据分析师在业务团队中的职能？怎样避免只做取数和报表？", "alternate_question": "一次分析从模糊需求到产生业务价值，完整闭环是什么？", "follow_up_questions": ["如何与产品、运营建立共同口径？", "建议没有被采纳时怎么办？"],
+      "answer_outline": ["从业务决策而非工具出发", "定义问题、证据、建议和验证", "推动协作与沉淀指标资产"], "scoring_points": ["强调决策价值", "有闭环意识", "沟通方式具体"], "common_mistakes": ["把岗位描述成做报表", "只强调技术能力"], "verification_urls": ["https://www.nowcoder.com/discuss/353156460706209792", "https://www.itl.nist.gov/div898/handbook/"]
+    }
+  ]
+}

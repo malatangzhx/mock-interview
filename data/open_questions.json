@@ -1,0 +1,120 @@
+{
+  "sources": [
+    {
+      "id": "continuumio-interview-questions",
+      "name": "ContinuumIO Interview Questions",
+      "repository_url": "https://github.com/ContinuumIO/interview-questions",
+      "content_url": "https://github.com/ContinuumIO/interview-questions/blob/master/README.md",
+      "license_name": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attribution": "Continuum Analytics, Inc. / ContinuumIO interview-questions",
+      "retrieved_at": "2026-09-07"
+    },
+    {
+      "id": "amitgaru-python-interview-prep",
+      "name": "Core Python Interview Topics",
+      "repository_url": "https://github.com/amitgaru/python-interview-prep",
+      "content_url": "https://github.com/amitgaru/python-interview-prep/blob/main/README.md",
+      "license_name": "Apache-2.0",
+      "license_url": "https://github.com/amitgaru/python-interview-prep/blob/main/LICENSE",
+      "attribution": "amitgaru / python-interview-prep contributors",
+      "retrieved_at": "2026-09-07"
+    },
+    {
+      "id": "ajitsingh98-data-science-interview",
+      "name": "Data Science Interview Questions & Answers",
+      "repository_url": "https://github.com/ajitsingh98/Data-Science-Interview-Questions-Answers",
+      "content_url": "https://github.com/ajitsingh98/Data-Science-Interview-Questions-Answers",
+      "license_name": "MIT",
+      "license_url": "https://github.com/ajitsingh98/Data-Science-Interview-Questions-Answers/blob/main/LICENSE",
+      "attribution": "Ajit Singh / Data-Science-Interview-Questions-Answers contributors",
+      "retrieved_at": "2026-09-07"
+    }
+  ],
+  "questions": [
+    {
+      "id": "oss-project-001", "source_id": "continuumio-interview-questions", "topic_key": "project", "roles": ["ai", "data", "general"], "difficulty": 2, "language": "zh-CN",
+      "question": "谈一个你在技术上最自豪的项目：它解决了什么问题，你具体负责什么，哪项技术决策最关键？",
+      "alternate_question": "回顾这个项目，哪段实现最值得保留，哪项设计现在会重做？请说明原因。",
+      "follow_up_questions": ["请给出一个能证明你个人贡献的实现细节。", "你比较过哪些替代方案，最后为什么没有选择它们？"]
+    },
+    {
+      "id": "oss-project-002", "source_id": "continuumio-interview-questions", "topic_key": "project", "roles": ["ai", "data", "general"], "difficulty": 3, "language": "zh-CN",
+      "question": "描述一次需要跳出常规思路才能解决的项目难题。你的方案为什么优于当时的备选方案？",
+      "alternate_question": "如果相同问题发生在十倍数据量或并发量下，你会怎样调整方案？",
+      "follow_up_questions": ["当时有哪些约束使常规方案不可行？", "你用什么证据验证方案确实更好？"]
+    },
+    {
+      "id": "oss-python-001", "source_id": "amitgaru-python-interview-prep", "topic_key": "python", "roles": ["ai", "data", "general"], "difficulty": 3, "language": "zh-CN",
+      "question": "Python 的生成器为什么适合处理大文件？请说明内存模型，并给出异常与资源关闭的处理方式。",
+      "alternate_question": "一个 Python 数据任务读取大文件时内存持续增长，你会如何定位并改写？",
+      "follow_up_questions": ["生成器和一次性构造列表的复杂度有什么区别？", "怎样确保文件句柄即使发生异常也能关闭？"]
+    },
+    {
+      "id": "oss-python-002", "source_id": "amitgaru-python-interview-prep", "topic_key": "python", "roles": ["ai", "general"], "difficulty": 4, "language": "zh-CN",
+      "question": "对比 Python 的线程、进程与 async/await：它们分别适合什么负载，GIL 会怎样影响选择？",
+      "alternate_question": "你要并发调用数百个外部模型接口，会选线程、进程还是异步 I/O？如何控制背压？",
+      "follow_up_questions": ["CPU 密集和 I/O 密集任务的选择为什么不同？", "如何限制并发，避免把下游服务压垮？"]
+    },
+    {
+      "id": "oss-llm-001", "source_id": "ajitsingh98-data-science-interview", "topic_key": "llm", "roles": ["ai"], "difficulty": 3, "language": "zh-CN",
+      "question": "解释大模型上下文窗口的作用。窗口变大时，效果、延迟、成本和信息利用率分别会发生什么变化？",
+      "alternate_question": "当输入资料超过模型上下文窗口时，你会如何设计裁剪、摘要或检索策略？",
+      "follow_up_questions": ["更大的上下文窗口是否一定带来更准确的答案？", "你会记录哪些指标来验证策略有效？"]
+    },
+    {
+      "id": "oss-rag-001", "source_id": "ajitsingh98-data-science-interview", "topic_key": "rag", "roles": ["ai"], "difficulty": 4, "language": "zh-CN",
+      "question": "任务相关的 Embedding 微调为什么能改善稠密检索？请说明正负样本、损失函数与离线评估。",
+      "alternate_question": "通用 Embedding 在你的专业语料上召回很差，你会先优化数据、检索参数还是微调模型？",
+      "follow_up_questions": ["困难负样本怎样构造，又可能引入什么偏差？", "如何把检索指标与最终回答质量分开评估？"]
+    },
+    {
+      "id": "oss-agent-001", "source_id": "ajitsingh98-data-science-interview", "topic_key": "agent", "roles": ["ai"], "difficulty": 4, "language": "zh-CN",
+      "question": "设计一个能调用外部工具的 Agent：如何定义工具 Schema、状态、权限边界、循环上限和失败恢复？",
+      "alternate_question": "Agent 开始重复调用同一工具并生成危险参数时，你会在哪些层面阻断和审计？",
+      "follow_up_questions": ["哪些步骤应固定成工作流而不交给模型决策？", "工具返回不可信内容时如何防止提示注入？"]
+    },
+    {
+      "id": "oss-backend-001", "source_id": "continuumio-interview-questions", "topic_key": "backend", "roles": ["ai", "general"], "difficulty": 3, "language": "zh-CN",
+      "question": "回忆一次数据库或服务性能调优：你观察了什么指标，怎样形成假设，又如何验证改动有效？",
+      "alternate_question": "一个查询或 API 只在生产环境偶发变慢，你会如何分层定位？",
+      "follow_up_questions": ["你如何区分 CPU、I/O、锁等待和下游依赖问题？", "优化后怎样防止性能回退？"]
+    },
+    {
+      "id": "oss-sql-001", "source_id": "continuumio-interview-questions", "topic_key": "sql", "roles": ["data", "general"], "difficulty": 4, "language": "zh-CN",
+      "question": "一条 SQL 查询运行缓慢，请从执行计划、扫描量、连接顺序、索引和数据分布说明排查过程。",
+      "alternate_question": "同一条查询昨天很快、今天很慢，除了改 SQL 之外你会检查哪些变化？",
+      "follow_up_questions": ["执行计划中的估算行数与实际行数差异意味着什么？", "什么情况下增加索引反而会带来负担？"]
+    },
+    {
+      "id": "oss-sql-002", "source_id": "ajitsingh98-data-science-interview", "topic_key": "sql", "roles": ["data"], "difficulty": 3, "language": "zh-CN",
+      "question": "请用窗口函数设计一个分组排名或留存分析，并解释 PARTITION、ORDER 与窗口边界的含义。",
+      "alternate_question": "窗口函数、GROUP BY 和自连接都能解决部分相似问题，你会如何选择？",
+      "follow_up_questions": ["如何处理并列排名与重复记录？", "数据量变大后会重点观察执行计划的哪些部分？"]
+    },
+    {
+      "id": "oss-statistics-001", "source_id": "ajitsingh98-data-science-interview", "topic_key": "statistics", "roles": ["data"], "difficulty": 4, "language": "zh-CN",
+      "question": "设计一次 A/B 测试：说明假设、随机化单位、核心指标、MDE、样本量以及何时停止实验。",
+      "alternate_question": "实验总体显著但关键用户分群方向相反，你会如何验证并解释？",
+      "follow_up_questions": ["持续偷看结果会造成什么问题？", "统计显著和业务价值之间如何做决策？"]
+    },
+    {
+      "id": "oss-quality-001", "source_id": "ajitsingh98-data-science-interview", "topic_key": "quality", "roles": ["data"], "difficulty": 3, "language": "zh-CN",
+      "question": "面对含缺失值、异常值和类别漂移的数据集，你会如何选择填补、删除或建模处理策略？",
+      "alternate_question": "线上模型输入分布突然变化，你怎样判断是业务变化、采集故障还是特征管道问题？",
+      "follow_up_questions": ["为什么均值填补可能扭曲分布和相关性？", "哪些质量规则适合自动化监控？"]
+    },
+    {
+      "id": "oss-visualization-001", "source_id": "ajitsingh98-data-science-interview", "topic_key": "visualization", "roles": ["data"], "difficulty": 3, "language": "zh-CN",
+      "question": "你会如何把一项统计或实验结论做成管理层可行动的可视化，同时表达不确定性而不误导？",
+      "alternate_question": "同一份分析面向管理层和分析师时，图表与信息密度应如何变化？",
+      "follow_up_questions": ["置信区间和样本量应如何呈现？", "哪些视觉编码容易夸大差异？"]
+    },
+    {
+      "id": "oss-business-001", "source_id": "ajitsingh98-data-science-interview", "topic_key": "business", "roles": ["data"], "difficulty": 3, "language": "zh-CN",
+      "question": "业务指标出现异常时，如何从指标定义、数据链路、分群和因果假设逐层缩小问题范围？",
+      "alternate_question": "如果业务方只说‘效果变差了’，你会如何把它转成可验证的分析问题？",
+      "follow_up_questions": ["如何避免把相关性误当作因果关系？", "建议实施后用什么方式衡量真实影响？"]
+    }
+  ]
+}

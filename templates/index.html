@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="MockLab 是一个本地、隐私优先的 AI 模拟面试平台，支持岗位定制、语音面试和证据化复盘。">
+  <meta name="theme-color" content="#f7f8fc" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0b0f17" media="(prefers-color-scheme: dark)">
+  <meta property="og:title" content="MockLab AI 模拟面试">
+  <meta property="og:description" content="从岗位画像、定制问题到逐题复盘，完成一次有依据的面试训练。">
+  <meta property="og:type" content="website">
+  <title>MockLab | AI 模拟面试</title>
+  <link rel="icon" href="/static/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/static/style.css">
+  <link rel="stylesheet" href="/static/interview.css">
+  <link rel="stylesheet" href="/static/compact.css">
+  <link rel="stylesheet" href="/static/product.css">
+  <link rel="stylesheet" href="/static/model-status.css">
+  <link rel="stylesheet" href="/static/scroll-fix.css">
+  <link rel="stylesheet" href="/static/question-bank.css?v=20260908-5">
+  <link rel="stylesheet" href="/static/ai-connection.css?v=20260908-6">
+  <link rel="stylesheet" href="/static/preflight.css?v=20260908-1">
+  <link rel="stylesheet" href="/static/aceternity.css?v=20260909-1">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">跳到主要内容</a>
+  <header class="topbar"><a class="brand" href="#welcome" aria-label="MockLab 首页">Mock<span>Lab</span></a><div class="topbar-status"><div id="modelConnectionStatus" class="model-status" data-state="offline">尚未选择 AI 模式</div><div class="privacy-pill">本地隐私模式</div><button id="themeToggle" class="theme-toggle" type="button" aria-label="切换深浅主题" aria-pressed="false"><span aria-hidden="true">◐</span><span class="theme-label">深色</span></button></div></header>
+  <main id="main-content" tabindex="-1">
+    <section id="welcome" class="screen active landing-shell">
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="hero-content">
+        <div class="hero-pill"><span></span>基于简历与岗位的 AI 模拟面试</div>
+        <h1>把每一次回答，<br><em>练成有证据的能力。</em></h1>
+        <p class="lead">从岗位画像、定制题目到逐题复盘，用一条清晰、可控的训练流程，找到下一次回答真正该改进的地方。</p>
+        <div class="privacy-card privacy-compact"><div class="privacy-icon" aria-hidden="true">✓</div><div><b>你的资料由你掌控</b><p>摄像头仅在浏览器本地预览，不录像、不上传、不分析；音频不保存。个人 API Key 仅保存在本机服务进程内存。</p><label><input id="privacyCheck" type="checkbox"> 我已阅读并同意以上说明</label></div></div>
+        <div class="hero-actions"><button id="beginBtn" class="primary hero-primary" type="button" disabled>创建模拟面试 <span aria-hidden="true">→</span></button><button id="historyBtn" class="secondary" type="button">查看练习记录</button><button id="welcomeBanks" class="ghost" type="button">管理题库</button></div>
+        <div class="hero-proof" aria-label="产品特性"><span><i></i>岗位定制</span><span><i></i>过程可控</span><span><i></i>证据化复盘</span></div>
+      </div>
+
+      <div class="product-preview" aria-label="模拟面试产品预览">
+        <div class="preview-chrome"><span></span><span></span><span></span><b>模拟面试进行中</b><small>12:08</small></div>
+        <div class="preview-body"><div class="preview-interviewer"><div class="preview-avatar">林</div><div><small>AI 面试官 · 正在提问</small><p>请结合一个真实项目，说明你如何验证检索增强生成的效果。</p></div></div><div class="preview-answer"><span>你的回答</span><div class="preview-wave"><i></i><i></i><i></i><i></i><i></i></div><small>语音已连接 · 字幕实时生成</small></div></div>
+        <div class="preview-progress"><i></i></div>
+      </div>
+
+      <div class="landing-section"><div class="section-heading"><span>完整训练闭环</span><h2>不是随机问答，而是一次有依据的演练</h2><p>每一步只呈现当前需要做的决定，复杂能力留在系统内部。</p></div><div class="feature-bento">
+        <article class="feature-card feature-wide"><div class="feature-icon">01</div><div><h3>简历与岗位共同驱动</h3><p>识别经历、技能和岗位要求，让问题更贴近你的实际背景，而不是套用通用题单。</p></div><div class="feature-tags"><span>简历解析</span><span>JD 分析</span><span>可编辑确认</span></div></article>
+        <article class="feature-card"><div class="feature-icon">02</div><h3>沉浸式模拟</h3><p>问题、进度、语音和设备状态清楚可见，让注意力留在回答本身。</p><div class="mini-status"><i></i>面试进行中</div></article>
+        <article class="feature-card"><div class="feature-icon">03</div><h3>基于证据的报告</h3><p>拆解优势、缺口与改进动作，并保留题目来源和回答证据。</p><div class="mini-score"><b>4.2</b><span>/ 5 综合表现</span></div></article>
+        <article class="feature-card feature-wide flow-card"><div><div class="feature-icon">04</div><h3>一条清晰的准备路径</h3></div><ol><li><b>连接 AI</b><span>选择服务方式</span></li><li><b>确认资料</b><span>简历与目标岗位</span></li><li><b>生成计划</b><span>确认题目构成</span></li><li><b>开始面试</b><span>完成设备检测</span></li></ol></article>
+      </div></div>
+    </section>
+
+    <section id="aiSetup" class="screen flow-screen" data-flow-step="0">
+      <div class="flow-index"></div><div class="step-kicker">第 1 步</div><h2>连接我的 AI</h2><p class="page-lead">优先使用你的模型；连接测试只发送一条不含个人资料的短请求。</p>
+      <article class="panel ai-connection focus-panel">
+        <div class="connection-title"><div><h3>个人 API</h3><p>API Key 只用于本场会话，不写入数据库或浏览器存储。</p></div><label class="switch" aria-label="使用个人 API"><input id="aiEnabled" type="checkbox"><span></span></label></div>
+        <div id="aiFields" class="connection-fields" hidden>
+          <label>服务商<select id="aiProvider">{% for id, preset in ai_providers.items() %}<option value="{{ id }}" {% if id == 'openai' %}selected{% endif %}>{{ preset.label }}</option>{% endfor %}</select></label>
+          <label>模型<select id="aiModelSelect"></select></label>
+          <label class="manual-model">模型 ID<input id="aiModel" type="text" autocomplete="off" placeholder="准确的模型 ID"></label>
+          <label>API Key<input id="aiApiKey" type="password" autocomplete="off" placeholder="仅本次使用"></label>
+          <details class="advanced ai-wide"><summary>高级设置</summary><div class="advanced-grid">
+            <label>Base URL / 完整接口地址<input id="aiBaseUrl" type="url" spellcheck="false"></label>
+            <label id="aiRealtimeUrlField" hidden>千问 Realtime URL<input id="aiRealtimeUrl" type="text" spellcheck="false"></label>
+            <label>接口协议<select id="aiWireApi"><option value="auto">自动识别</option><option value="chat">OpenAI Chat Completions</option><option value="responses">OpenAI Responses</option><option value="anthropic">Anthropic Messages</option></select></label>
+            <label>响应超时（秒）<input id="aiTimeout" type="number" min="10" max="180" value="90"></label>
+            <label class="ai-stream"><input id="aiStream" type="checkbox"> 使用流式请求</label>
+          </div></details>
+          <p id="aiProviderHint" class="muted ai-wide"></p>
+          <button id="testAiBtn" class="primary stateful-button" data-idle-label="测试并连接">测试并连接</button>
+        </div>
+        <div id="aiConnectedSummary" class="connected-summary" hidden><span class="status-dot"></span><div><b id="aiConnectedModel">已连接</b><small id="aiConnectedLatency"></small></div><button id="editAiConnection" type="button" class="small">修改配置</button></div>
+        <p id="aiStatus" class="field-status" role="status" aria-live="polite">请选择一种方式继续。</p>
+        <label class="style-picker">面试官风格<select id="interviewerStyle"><option value="professional">专业技术官</option><option value="warm">温和 HR</option><option value="pressure">压力面试官</option></select></label>
+      </article>
+      <div class="secondary-paths"><button id="useSystemAi" class="secondary">使用系统 AI</button><button id="useLocalMode" class="ghost">暂不使用 AI，进入本地模式</button></div>
+      <div class="sticky-action"><button id="aiNextBtn" class="primary" disabled>继续填写资料 →</button></div>
+    </section>
+
+    <section id="profileSetup" class="screen flow-screen" data-flow-step="1">
+      <div class="flow-index"></div><div class="step-kicker">第 2 步</div><h2>个人资料</h2><p class="page-lead">上传或粘贴简历，主动分析后再确认；也可以跳过并使用通用画像。</p>
+      <article class="panel single-task-panel">
+        <div id="dropzone" class="dropzone file-drop"><input id="resumeFile" type="file" accept=".pdf,.docx,.txt" aria-describedby="resumeFileHint"><div class="upload-mark" aria-hidden="true"><span>↑</span></div><b>拖入简历，或点击选择文件</b><span id="resumeFileHint">PDF / DOCX / TXT，最大 5 MB</span><small id="resumeFileName" hidden></small></div>
+        <textarea id="resumeText" rows="9" placeholder="或粘贴脱敏后的简历文本……"></textarea><p id="uploadStatus" class="field-status"></p>
+        <div id="candidateEditor" class="expandable-card" hidden><div class="card-summary"><div><b>提取结果</b><small id="candidateSummary">请核对后继续</small></div><span class="status-chip done">已完成</span></div><div class="editor-grid"><label>目标岗位<input id="candidateRole"></label><label>技能（每行一个）<textarea id="candidateSkills" rows="6"></textarea></label><label>项目与证据（每行一个）<textarea id="candidateProjects" rows="7"></textarea></label></div></div>
+      </article>
+      <div id="profileLoader" class="task-loader" hidden aria-live="polite"></div>
+      <div class="sticky-action split"><button class="secondary" data-flow-back="aiSetup">返回</button><button id="skipResume" class="ghost">跳过资料</button><button id="parseBtn" class="primary stateful-button">分析简历</button></div>
+    </section>
+
+    <section id="jobSetup" class="screen flow-screen" data-flow-step="2">
+      <div class="flow-index"></div><div class="step-kicker">第 3 步</div><h2>目标岗位</h2><p class="page-lead">选择预设或粘贴 JD；分析结果确认后才会影响题库推荐和计划。</p>
+      <article class="panel single-task-panel">
+        <div class="target-tabs" role="tablist" aria-label="是否有目标岗位"><button id="targetRoleTab" type="button" role="tab" aria-selected="true" aria-controls="targetJobPanel" tabindex="0" data-target-view="target"><b>有目标岗位</b><span>根据 JD 定制问题</span></button><button id="generalRoleTab" type="button" role="tab" aria-selected="false" aria-controls="generalJobPanel" tabindex="-1" data-target-view="general"><b>暂无目标岗位</b><span>使用通用能力模型</span></button></div>
+        <div id="targetJobPanel" role="tabpanel" aria-labelledby="targetRoleTab">
+          <label>目标公司<select id="targetCompany"><option value="通用">通用（不限定公司）</option></select><small id="companyHint">有公开面经题时会优先参考。</small></label>
+          <div class="choice-list"><label class="choice"><input type="radio" name="jobMode" value="ai" checked><span><b>AI 应用开发实习生</b><small>预设岗位 · 内置能力基线</small></span></label><label class="choice"><input type="radio" name="jobMode" value="data"><span><b>数据分析师</b><small>SQL、统计与业务分析</small></span></label><label class="choice"><input type="radio" name="jobMode" value="custom"><span><b>其他岗位</b><small>粘贴岗位描述后分析</small></span></label></div>
+          <label class="field-label" for="jdText">岗位描述</label><textarea id="jdText" rows="8" disabled>{{ builtin_jd }}</textarea>
+          <div id="jobEditor" class="expandable-card" hidden><div class="card-summary"><div><b>岗位画像</b><small>可直接修正识别结果</small></div><span id="modeBadge" class="status-chip done"></span></div><div class="editor-grid"><label>目标公司<select id="jobCompany"><option value="通用">通用（不限定公司）</option></select></label><label>岗位名称<input id="jobTitle"></label><label>职责与能力要求（每行一个）<textarea id="jobRequirements" rows="8"></textarea></label></div></div>
+        </div>
+        <div id="generalJobPanel" class="general-job-panel" role="tabpanel" aria-labelledby="generalRoleTab" hidden><div class="general-job-icon" aria-hidden="true">◎</div><h3>先练通用面试能力</h3><p>系统会围绕表达结构、项目经历、问题拆解和协作沟通生成练习。之后仍可创建一场岗位定制面试。</p><ul><li>不需要填写公司或 JD</li><li>仍会结合已确认的简历内容</li><li>报告采用同一套训练量表</li></ul></div>
+      </article>
+      <div id="jobLoader" class="task-loader" hidden aria-live="polite"></div>
+      <div class="sticky-action split"><button class="secondary" data-flow-back="profileSetup">返回</button><button id="skipJob" class="primary" type="button" hidden>使用通用岗位继续 →</button><button id="confirmBtn" class="primary stateful-button">分析岗位</button></div>
+    </section>
+
+    <section id="bankSetup" class="screen flow-screen" data-flow-step="3">
+      <div class="flow-index"></div><div class="step-kicker">第 4 步</div><h2>本场题库</h2><p class="page-lead">选择题库并调整顺序；推荐仅供参考，最终选择始终由你确认。</p>
+      <article class="panel bank-picker">
+        <div class="bank-picker-head"><div><h3>已选题库 <span id="userBankCount" class="badge">未选择</span></h3><p class="muted">顺序越靠前，选题优先级越高。</p></div><button type="button" class="secondary" id="manageBanks">管理与导入</button></div>
+        <div id="bankRecommendations" class="recommendation-box" hidden></div><div id="bankSelection" class="bank-selection" aria-live="polite"></div>
+        <div class="bank-settings"><label>练习模式<select id="practiceMode"><option value="normal">普通模式 · 用户题优先，不足时补题</option><option value="specialized">专项模式 · 只练所选个人题库</option></select><small id="practiceModeHint"></small></label><label class="choice repeat-setting"><input id="allowRepeats" type="checkbox"><span><b>允许重复练习</b><small>开启后可再次抽取已展示题目</small></span></label></div>
+      </article>
+      <div class="sticky-action split"><button class="secondary" data-flow-back="jobSetup">返回</button><button id="bankNextBtn" class="primary stateful-button">生成面试计划 →</button></div>
+    </section>
+
+    <section id="planSetup" class="screen flow-screen" data-flow-step="4">
+      <div class="flow-index"></div><div class="step-kicker">第 5 步</div><h2>面试计划</h2><p class="page-lead">确认预计时长、题目构成、来源和选择理由；面试前不会展示参考答案。</p>
+      <div id="modeNotice"></div><div id="planMeta" class="metrics"></div><div id="planAdvice" class="recommendation-box" hidden></div><div id="topicList" class="topic-list"></div>
+      <div class="sticky-action split"><button class="secondary" data-flow-back="bankSetup">返回修改</button><button id="planNextBtn" class="primary">确认计划并调试 →</button></div>
+    </section>
+
+    <section id="ready" class="screen flow-screen" data-flow-step="5">
+      <div class="flow-index"></div><div class="step-kicker">第 6 步</div><h2>面试调试</h2><p class="page-lead">一次检查本场会使用的摄像头、麦克风、语音识别和大模型。</p>
+      <div class="debug-progress"><span id="debugProgressText">0 / 4 已处理</span><div class="progress"><i id="debugProgressBar"></i></div></div>
+      <div class="grid two device-grid">
+        <article class="debug-card" data-check="camera"><div class="debug-card-head"><div><span class="debug-icon">01</span><b>摄像头</b></div><span id="cameraState" class="status-chip">未检测</span></div><video id="readyCamera" autoplay muted playsinline></video><p id="cameraResult">画面只在本地预览。</p><button id="cameraBtn" class="small">单独检测</button><button id="cameraBypass" class="ghost small" hidden>无摄像头继续</button></article>
+        <article class="debug-card" data-check="mic"><div class="debug-card-head"><div><span class="debug-icon">02</span><b>麦克风</b></div><span id="micState" class="status-chip">未检测</span></div><div class="audio-meter" aria-label="麦克风音量"><i id="micLevel"></i></div><p id="micResult">检测权限、设备和声音输入。</p><button id="micBtn" class="small">单独检测</button></article>
+        <article class="debug-card" data-check="speech"><div class="debug-card-head"><div><span class="debug-icon">03</span><b>语音识别</b></div><span id="speechState" class="status-chip">未检测</span></div><p class="test-phrase">请朗读：“我已经准备好开始模拟面试”</p><output id="speechTranscript">等待检测</output><p id="speechResult">不可用时自动切换文字输入。</p><button id="speechBtn" class="small">单独检测</button><button id="voiceBtn" class="ghost small">试听面试官音色</button></article>
+        <article class="debug-card" data-check="model"><div class="debug-card-head"><div><span class="debug-icon">04</span><b>大模型</b></div><span id="modelState" class="status-chip">未检测</span></div><p id="modelResult">使用正式面试的连接发送合成测试数据。</p><button id="modelBtn" class="small">单独检测</button><button id="editAiFromDebug" class="ghost small">修改 AI 配置</button></article>
+      </div>
+      <div id="deviceStatus" class="sr-only" aria-live="polite"></div><div id="debugLoader" class="task-loader" hidden aria-live="polite"></div>
+      <button id="runAllChecks" class="primary stateful-button wide-action">开始全部检测</button>
+      <div class="start-gate"><div><b>开始条件</b><small id="startBlockers">请先完成全部检测。</small></div><input id="durationCheck" type="checkbox" hidden><button id="startBtn" class="primary" disabled>开始正式面试 →</button></div>
+      <div class="sticky-action"><button class="secondary" data-flow-back="planSetup">返回计划</button></div>
+    </section>
+
+    <section id="bankManager" class="screen">
+      <div class="step">独立题库管理</div><h2>核对原题，保留来源</h2>
+      <article class="panel"><div class="grid two"><label>当前题库<select id="managedBank"></select></label><label>题库名称<input id="bankName" maxlength="100" placeholder="例如：数据分析面经"></label><label>默认公司<input id="bankCompany" placeholder="未知可留空"></label><label>默认岗位<input id="bankRole" placeholder="未知可留空"></label></div><div class="actions"><button id="createBank" class="secondary">新建题库</button><button id="renameBank" class="secondary">保存题库信息</button><button id="viewBank" class="secondary">查看 / 编辑题目</button></div></article>
+      <article class="panel"><h3>粘贴或导入</h3><p class="muted">支持 TXT、Markdown、CSV、JSON、DOCX。先预览，确认后才参与出题。</p><textarea id="userQuestionsText" rows="6" placeholder="1. 请说明你的解决思路？&#10;条件：输入包含 1000 条记录。&#10;答案：参考思路……"></textarea><div class="question-bank-import"><input id="questionBankFile" type="file" accept=".txt,.md,.markdown,.csv,.json,.docx"><button id="importQuestionFile" class="secondary">预览文件</button><button id="saveUserQuestions" class="secondary">预览粘贴内容</button></div><p id="userBankStatus" class="status" role="status"></p></article>
+      <article id="draftPanel" class="panel" hidden><h3 id="draftTitle">导入预览</h3><p class="muted">可修改题干与元数据、删除无关条目。参考答案统一标记为未核验。</p><div class="grid two"><label>本批公司<input id="batchCompany"></label><label>本批岗位<input id="batchRole"></label></div><div id="draftEntries"></div><div class="actions"><button id="mergeEntries" class="secondary">合并勾选条目</button><button id="confirmDraft" class="primary">确认入库</button><button id="cancelDraft" class="secondary">关闭预览</button></div></article><div id="managedQuestions"></div><div class="actions"><button id="backFromBanks" class="secondary">返回</button></div>
+    </section>
+
+    <section id="interview" class="screen flow-screen interview-screen" data-flow-step="6">
+      <div class="interview-head"><div><span id="progressLabel">面试进行中</span><div class="progress"><i id="progressBar"></i></div></div><div id="timer">00:00</div><div><button id="counterQuestion" class="ghost">向面试官反问</button><button id="earlyFinish" class="danger-link">提前结束</button></div></div>
+      <div class="video-stage"><article class="video-tile candidate-tile"><video id="candidateVideo" autoplay muted playsinline></video><div class="video-label"><i></i> 你 · 候选人</div><div id="cameraFallback" class="camera-fallback">摄像头关闭<br><small>可继续语音或文字面试</small></div></article><article id="aiTile" class="video-tile ai-tile"><img src="/static/assets/interviewer-lin.png" alt="知性女性虚拟面试官林老师"><div class="ai-vignette"></div><div class="video-label"><i></i> 林老师 · AI 面试官</div><div id="voiceWave" class="voice-wave"><span></span><span></span><span></span><span></span><span></span></div></article></div>
+      <div class="dialog-card"><div class="dialog-meta"><span id="topicName" class="eyebrow"></span><span id="sourceBadge" class="badge"></span></div><div id="question" class="question" role="status" aria-live="polite"></div></div>
+      <div class="answer-card live-answer-card"><div class="answer-head"><div><b>实时语音与字幕</b><small id="turnHint">正在建立实时语音连接…</small></div><div id="liveControls" class="live-controls"><button id="muteBtn" class="small" type="button">静音</button><button id="reconnectBtn" class="small" type="button" hidden>重新连接</button><button id="textFallbackBtn" class="small" type="button">切换文字</button></div></div><div id="transcriptFeed" class="transcript-feed" aria-live="polite"><p class="transcript-empty">双方字幕将在这里实时显示</p></div><div id="textFallback" class="text-fallback" hidden><label for="answerText">文字回答</label><textarea id="answerText" rows="4"></textarea><button id="submitAnswer" class="primary" disabled>提交文字回答</button></div><p id="interviewStatus" class="status" role="status"></p><audio id="remoteAudio" autoplay></audio></div>
+    </section>
+
+    <section id="report" class="screen report-screen"><div class="step">训练报告</div><div id="reportContent" aria-live="polite"></div><div class="actions report-actions"><button id="postTestBtn" class="secondary" type="button">完成平行后测</button><button id="newInterview" class="primary" type="button">开始新的练习</button><button id="deleteCurrent" class="secondary danger" type="button">删除本场记录</button></div></section>
+    <section id="history" class="screen dashboard-screen"><div class="dashboard-layout"><aside class="dashboard-sidebar"><div><span class="sidebar-kicker">训练空间</span><h3>我的训练</h3></div><nav aria-label="训练空间导航"><button class="sidebar-link active" type="button"><span aria-hidden="true">◫</span>练习概览</button><button id="newFromDashboard" class="sidebar-link" type="button"><span aria-hidden="true">＋</span>创建面试</button><button id="banksFromDashboard" class="sidebar-link" type="button"><span aria-hidden="true">▤</span>题库管理</button></nav><div class="sidebar-profile"><div>本</div><span><b>本地训练档案</b><small>数据保存在此设备</small></span></div></aside><div class="dashboard-main"><div class="dashboard-heading"><div><div class="step">训练概览</div><h2>练习概览</h2><p>回顾最近的训练节奏和表现，继续最值得改进的部分。</p></div><button id="dashboardStart" class="primary" type="button">＋ 新建模拟面试</button></div><div id="historySummary" class="dashboard-summary" aria-live="polite"></div><div class="history-section-head"><div><h3>最近面试</h3><p>按最近更新时间排列</p></div></div><div id="historyList"></div></div></div></section>
+  </main>
+  <div id="appDialog" class="modal-shell" hidden><div class="modal-backdrop" data-app-dialog-close></div><div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="appDialogTitle" aria-describedby="appDialogBody" tabindex="-1"><h3 id="appDialogTitle">请确认</h3><p id="appDialogBody"></p><label id="appDialogField" class="app-dialog-field" for="appDialogInput" hidden><span id="appDialogInputLabel">请输入内容</span><textarea id="appDialogInput" rows="4"></textarea></label><div class="actions"><button id="appDialogCancel" class="secondary" type="button">取消</button><button id="appDialogConfirm" class="primary" type="button">确认</button></div></div></div>
+  <div id="confirmModal" class="modal-shell" hidden><div class="modal-backdrop" data-modal-close></div><div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle" tabindex="-1"><h3 id="modalTitle">无摄像头继续？</h3><p id="modalBody">正式面试将不会显示你的画面，本场也不会再次要求摄像头。</p><div class="actions"><button class="secondary" type="button" data-modal-close>取消</button><button id="modalConfirm" class="primary" type="button">确认继续</button></div></div></div>
+  <div id="toast" role="status"></div>
+  <script id="aiPresets" type="application/json">{{ ai_providers | tojson }}</script>
+  <script src="/static/app.js?v=20260909-1"></script>
+  <script src="/static/banks.js?v=20260908-5"></script>
+  <script src="/static/preflight.js?v=20260908-1"></script>
+  <script src="/static/ui-enhancements.js?v=20260909-1"></script>
+</body>
+</html>

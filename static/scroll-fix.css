@@ -1,0 +1,1 @@
+@media(min-width:900px){body{overflow:auto!important}main{height:auto!important;min-height:calc(100vh - 60px);overflow:visible!important}.screen.active{height:auto!important;min-height:calc(100vh - 100px);overflow:visible!important}#setup .panel,#confirm .panel{max-height:none!important;overflow:visible!important}}
